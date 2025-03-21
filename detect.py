@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 # Define input and output folders
 dataset_folder = "dataset1"
-output_folder = "extracted_faces"
+output_folder = "extracted_faces_ssd"
 
 # Create the output folder if it doesn't exist
 if not os.path.exists(output_folder):
@@ -20,7 +20,7 @@ for filename in tqdm(os.listdir(dataset_folder)):
         #print(f"Processing {filename}...")
         try:
             # Use DeepFace to extract faces; enforce_detection=False prevents errors when no face is found
-            faces = DeepFace.extract_faces(img_path=file_path, detector_backend="retinaface", enforce_detection=False, normalize_face=False, color_face='bgr')
+            faces = DeepFace.extract_faces(img_path=file_path, detector_backend="ssd", normalize_face=False, color_face='bgr', align=False)
             
             if faces:
                 # Use the base filename for saving faces
