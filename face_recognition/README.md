@@ -1,6 +1,14 @@
-# Face Recognition with Siamese Networks
+# Face Recognition System
 
-Face recognition system using siamese neural networks and triplet loss.
+A face recognition system using siamese neural networks and triplet loss.
+
+## Directory Structure
+
+- `siamese_triplet/`: Implementation of face recognition using Siamese Triplet Networks
+  - `face_recognition.py`: Consolidated model and evaluation functionality
+  - `evaluate_face_model.sh`: Script for running evaluations
+  - Training modules: `face_networks.py`, `face_losses.py`, `face_datasets.py`, etc.
+  - Shell scripts: `train_quick.sh`, `run_recommended_training.sh`, etc.
 
 ## Requirements
 
@@ -11,41 +19,32 @@ pip install -r requirements.txt
 
 ## Usage
 
+### Training
+
+For quick training:
+```bash
+cd face_recognition/siamese_triplet
+./run_quick_training.sh YOUR_ROBOFLOW_API_KEY
+```
+
+For recommended training:
+```bash
+cd face_recognition/siamese_triplet
+./run_recommended_training.sh YOUR_ROBOFLOW_API_KEY
+```
+
 ### Evaluation
 
-Run the evaluation script:
 ```bash
+cd face_recognition/siamese_triplet
 ./evaluate_face_model.sh --model path/to/model.pth --test-dir path/to/test/dir
 ```
 
-Optional parameters:
-- `--output-dir`: Directory to save results (default: evaluation_results)
-- `--threshold`: Custom threshold value (default: automatically determined)
+### Identification
 
-## File Overview
+```bash
+cd face_recognition/siamese_triplet
+python identify_face.py --model path/to/model.pth --image path/to/image.jpg
+```
 
-- `face_recognition.py`: Consolidated script with model architecture and evaluation functionality
-- `evaluate_face_model.sh`: Convenient shell script for running evaluations
-
-## Threshold Values
-
-When you run the evaluation, the script will either:
-1. Automatically find the optimal threshold (default)
-2. Use your custom threshold value (if provided)
-
-The threshold determines whether two faces match:
-- If the distance between face embeddings is < threshold: SAME person
-- If the distance between face embeddings is ≥ threshold: DIFFERENT person
-
-## Output
-
-The evaluation produces:
-1. Metrics JSON file with:
-   - Threshold value
-   - Accuracy, precision, recall, F1 score
-   - Confusion matrix values (TP, FP, TN, FN)
-
-2. Visualization plots:
-   - ROC curve
-   - Precision-recall curve
-   - Distance distributions for same/different faces 
+For more detailed instructions, see the README and documentation files in the siamese_triplet directory.
