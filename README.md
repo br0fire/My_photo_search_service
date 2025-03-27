@@ -2,5 +2,6 @@
 
 
 Here is our data:
-Test data (not preprocessed) : https://disk.yandex.ru/d/gCYASv9JO8GYpA
+
+Test data (contains 2 files: photos from meetups and faces from them): https://disk.yandex.ru/d/zZGBaYQ0kLpPEQ
 
