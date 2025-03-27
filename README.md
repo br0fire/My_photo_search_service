@@ -54,6 +54,7 @@ Our system outperforms baseline models, including pre-trained ArcFace and VGG-Fa
 - preprocess/
   deblurring.py
   deduplicate.py
+  unzip.sh
 - recognition/
   - ...
   - ...
