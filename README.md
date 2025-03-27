@@ -33,7 +33,7 @@ A custom, labeled dataset created from public events (AIRI meetups and Innovatio
 The dataset addresses typical event photography challenges (varying poses, illumination conditions, occlusion).
 
 ### [Download Labeled Train Dataset](https://app.roboflow.com/melnikum/my-photo-search-2/browse)
-### [Download Labeled Test Dataset](https://app.roboflow.com/melnikum/my-photo-search-2/browse)
+### [Download Labeled Test Dataset](https://disk.yandex.ru/d/zZGBaYQ0kLpPEQ)
 
 ## Results
 
@@ -73,4 +73,3 @@ Our system outperforms baseline models, including pre-trained ArcFace and VGG-Fa
 - Alexander Zaytsev
 - Yurii Melnik
 - Petr Sokerin
-
