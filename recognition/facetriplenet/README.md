@@ -4,11 +4,10 @@ A face recognition system using siamese neural networks and triplet loss.
 
 ## Directory Structure
 
-- `siamese_triplet/`: Implementation of face recognition using Siamese Triplet Networks
-  - `face_recognition.py`: Consolidated model and evaluation functionality
-  - `evaluate_face_model.sh`: Script for running evaluations
-  - Training modules: `face_networks.py`, `face_losses.py`, `face_datasets.py`, etc.
-  - Shell scripts: `train_quick.sh`, `run_recommended_training.sh`, etc.
+- `face_recognition.py`: Consolidated model and evaluation functionality
+- `evaluate_face_model.sh`: Script for running evaluations
+- Training modules: `face_networks.py`, `face_losses.py`, `face_datasets.py`, etc.
+- Shell scripts: `train_quick.sh`, `run_recommended_training.sh`, etc.
 
 ## Requirements
 
@@ -23,27 +22,23 @@ pip install -r requirements.txt
 
 For quick training:
 ```bash
-cd face_recognition/siamese_triplet
 ./run_quick_training.sh YOUR_ROBOFLOW_API_KEY
 ```
 
 For recommended training:
 ```bash
-cd face_recognition/siamese_triplet
 ./run_recommended_training.sh YOUR_ROBOFLOW_API_KEY
 ```
 
 ### Evaluation
 
 ```bash
-cd face_recognition/siamese_triplet
 ./evaluate_face_model.sh --model path/to/model.pth --test-dir path/to/test/dir
 ```
 
 ### Identification
 
 ```bash
-cd face_recognition/siamese_triplet
 python identify_face.py --model path/to/model.pth --image path/to/image.jpg
 ```
 
