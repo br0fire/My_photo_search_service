@@ -56,8 +56,8 @@ Our system outperforms baseline models, including pre-trained ArcFace and VGG-Fa
   deduplicate.py
   unzip.sh
 - recognition/
-  - ...
-  - ...
+  - facenet/
+  - facetriplenet/
 - evaluation/
   - DeepFace benchmark.ipynb
 - data/
